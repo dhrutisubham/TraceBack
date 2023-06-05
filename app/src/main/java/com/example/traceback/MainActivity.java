@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(v.getId()==R.id.landingLogin)
                 startActivity(new Intent(this, loginPage.class));
             if(v.getId()== R.id.landingRegister)
-                startActivity(new Intent(this, register_page.class));
+                startActivity(new Intent(this, registerPage.class));
 
         }
 

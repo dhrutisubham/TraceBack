@@ -1,73 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#323643"
-    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/landingPage"
-        android:layout_width="404dp"
-        android:layout_height="376dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/landingpage" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1036"
-        app:srcCompat="@drawable/darklogo_large" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#323643"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/landingLogin"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:autoText="false"
-        android:background="@drawable/btn_large_solid"
-        android:clickable="true"
-        android:fontFamily="@font/lato"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/loginButton"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#323643"
-        android:textSize="24sp"
-        app:backgroundTint="#92DDFE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/landingPage" />
 
-    <Button
-        android:id="@+id/landingRegister"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/btn_large"
-        android:fontFamily="@font/lato"
-        android:text="@string/registerButton"
-        android:textAllCaps="false"
-        android:textColor="#93DEFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/landingLogin" />
+        <ImageView
+            android:id="@+id/landingPage"
+            android:layout_width="404dp"
+            android:layout_height="376dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landingLogo"
+            app:srcCompat="@drawable/landingpage" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/landingLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="54dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1036"
+            app:srcCompat="@drawable/darklogo_large" />
+
+        <Button
+            android:id="@+id/landingLogin"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:autoText="false"
+            android:background="@drawable/btn_large_solid"
+            android:clickable="true"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/loginButton"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#323643"
+            android:textSize="24sp"
+            app:backgroundTint="#92DDFE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landingPage" />
+
+        <Button
+            android:id="@+id/landingRegister"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_large"
+            android:fontFamily="@font/lato"
+            android:text="@string/registerButton"
+            android:textAllCaps="false"
+            android:textColor="#93DEFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landingLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
