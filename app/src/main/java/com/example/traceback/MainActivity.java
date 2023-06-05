@@ -1,8 +1,10 @@
 package com.example.traceback;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,20 +39,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-//    @Override
-//    public void onBackPressed() {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setTitle("Exit Confirmation");
-//        builder.setMessage("Are you sure you want to exit?");
-//        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Perform any cleanup or additional tasks before exiting the app
-//                finish(); // Close the activity and exit the app
-//            }
-//        });
-//        builder.setNegativeButton("No", null);
-//        builder.show();
-//    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Exit Confirmation");
+        builder.setMessage("Are you sure you want to exit?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Perform any cleanup or additional tasks before exiting the app
+                finish(); // Close the activity and exit the app
+            }
+        });
+        builder.setNegativeButton("No", null);
+        builder.show();
+    }
 
 }

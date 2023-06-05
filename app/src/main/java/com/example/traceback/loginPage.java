@@ -11,4 +11,9 @@ public class loginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
 }

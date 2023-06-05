@@ -11,4 +11,9 @@ public class register_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
 }
