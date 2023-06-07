@@ -38,42 +38,42 @@
             app:layout_constraintVertical_bias="0.1036"
             app:srcCompat="@drawable/darklogo_large" />
 
-        <Button
-            android:id="@+id/landingLogin"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="32dp"
-            android:autoText="false"
-            android:background="@drawable/btn_large_solid"
-            android:clickable="true"
-            android:fontFamily="@font/lato"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/loginButton"
-            android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#323643"
-            android:textSize="24sp"
-            app:backgroundTint="#92DDFE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/landingPage" />
+    <Button
+        android:id="@+id/landingLogin"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:autoText="false"
+        android:background="@drawable/btn_large_solid"
+        android:clickable="true"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/loginButton"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#323643"
+        android:textSize="20sp"
+        app:backgroundTint="#92DDFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/landingPage" />
 
-        <Button
-            android:id="@+id/landingRegister"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/btn_large"
-            android:fontFamily="@font/lato"
-            android:text="@string/registerButton"
-            android:textAllCaps="false"
-            android:textColor="#93DEFF"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/landingLogin" />
+    <Button
+        android:id="@+id/landingRegister"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_large"
+        android:fontFamily="@font/lato"
+        android:text="@string/registerButton"
+        android:textAllCaps="false"
+        android:textColor="#93DEFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/landingLogin" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

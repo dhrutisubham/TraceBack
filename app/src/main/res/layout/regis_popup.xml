@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/regispopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popupbg"
+        android:paddingLeft="32dp"
+        android:paddingTop="24dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/popTake"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_large"
+            android:drawableLeft="@drawable/camera1low"
+            android:drawablePadding="-12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal|center_vertical"
+            android:maxWidth="360dp"
+            android:minHeight="60dp"
+            android:paddingLeft="28dp"
+            android:text="Take a Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/themeblue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/popUpload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_large_solid"
+            android:drawableLeft="@drawable/upload1"
+            android:drawablePadding="-12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal|center_vertical"
+            android:maxWidth="360dp"
+            android:minHeight="60dp"
+            android:paddingLeft="28dp"
+            android:text="Upload Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/themedark"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popTake" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

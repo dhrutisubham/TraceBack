@@ -1,146 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView -->
+<!--    android:id="@+id/regisScroll"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:scrollbarDefaultDelayBeforeFade="0"-->
+<!--    android:scrollbarFadeDuration="0"-->
+<!--    android:scrollbarSize="0dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/regisScroll"
+    android:id="@+id/regispage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarDefaultDelayBeforeFade="0"
-    android:scrollbarFadeDuration="0"
-    android:scrollbarSize="0dp"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="730dp">
+    tools:context=".registerPage">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/regispage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".registerPage">
 
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="16dp"
-            android:autoText="false"
-            android:background="@drawable/btn_large_solid"
-            android:clickable="true"
-            android:fontFamily="@font/lato"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/loginButton"
-            android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#323643"
-            android:textSize="24sp"
-            app:backgroundTint="#92DDFE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginpw" />
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
+        android:background="@drawable/btn_large_solid"
+        android:clickable="true"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/loginButton"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#323643"
+        android:textSize="20sp"
+        app:backgroundTint="#92DDFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpw" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.1102"
-            app:srcCompat="@drawable/darklogo_small" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1102"
+        app:srcCompat="@drawable/darklogo_small" />
 
-        <TextView
-            android:id="@+id/loginBanner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:fontFamily="@font/lato_light"
-            android:text="@string/loginButton"
-            android:textAllCaps="false"
-            android:textColor="@color/themeblue"
-            android:textSize="72sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <TextView
+        android:id="@+id/loginBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/loginButton"
+        android:textAllCaps="false"
+        android:textColor="@color/themeblue"
+        android:textSize="72sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <EditText
-            android:id="@+id/loginEmail"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="68dp"
-            android:background="@drawable/textfield"
-            android:capitalize="none"
-            android:ems="10"
-            android:fontFamily="@font/lato"
-            android:hint="Email"
-            android:includeFontPadding="true"
-            android:inputType="text"
-            android:padding="16dp"
-            android:textAllCaps="false"
-            android:textColor="@color/themeblue"
-            android:textColorHint="@color/themebluehint"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginBanner" />
+    <EditText
+        android:id="@+id/loginEmail"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/textfield"
+        android:capitalize="none"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="Email"
+        android:includeFontPadding="true"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/themeblue"
+        android:textColorHint="@color/themebluehint"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBanner" />
 
-        <EditText
-            android:id="@+id/loginpw"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/textfield"
-            android:ems="10"
-            android:fontFamily="@font/lato"
-            android:hint="Password"
-            android:includeFontPadding="true"
-            android:inputType="text"
-            android:padding="16dp"
-            android:password="true"
-            android:textColor="@color/themeblue"
-            android:textColorHint="@color/themebluehint"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+    <EditText
+        android:id="@+id/loginpw"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textfield"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="Password"
+        android:includeFontPadding="true"
+        android:inputType="text"
+        android:padding="16dp"
+        android:password="true"
+        android:textColor="@color/themeblue"
+        android:textColorHint="@color/themebluehint"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
 
-        <TextView
-            android:id="@+id/loginText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/lato"
-            android:text="Already Registered?"
-            android:textColor="@color/themewhite"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/lato"
+        android:text="Already Registered?"
+        android:textColor="@color/themewhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-        <TextView
-            android:id="@+id/loginRegis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:clickable="true"
-            android:fontFamily="@font/lato"
-            android:text="@string/registerButton"
-            android:textColor="@color/themeblue"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+    <TextView
+        android:id="@+id/loginRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:fontFamily="@font/lato"
+        android:text="@string/registerButton"
+        android:textColor="@color/themeblue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginText" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:clickable="true"
-            android:src="@drawable/bgimage"
-            app:layout_constraintEnd_toEndOf="@+id/loginRegis"
-            app:layout_constraintStart_toStartOf="@+id/loginRegis"
-            app:layout_constraintTop_toBottomOf="@+id/loginRegis" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:src="@drawable/bgimage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    </LinearLayout>-->
+    <!--</ScrollView>-->

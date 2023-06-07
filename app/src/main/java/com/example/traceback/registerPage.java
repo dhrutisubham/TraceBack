@@ -11,11 +11,13 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class registerPage extends AppCompatActivity implements View.OnClickListener {
 
     TextView regPagelogin;
+    Button regButton;
 
 
     @SuppressLint("MissingInflatedId")
@@ -30,6 +32,9 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         regPagelogin.setPaintFlags(regPagelogin.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         regPagelogin.setOnClickListener(this);
+
+        regButton=(Button) findViewById(R.id.regisButton);
+        regButton.setOnClickListener(this);
 //        layout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 //            @Override
 //            public void onGlobalLayout() {
@@ -58,6 +63,9 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         if(v.getId()==R.id.regisLogin){
             finish();
             startActivity(new Intent(this, loginPage.class));
+        }
+        else if(v.getId()==R.id.regisButton){
+            startActivity(new Intent(this, register2.class));
         }
     }
 }
