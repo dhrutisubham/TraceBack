@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/placeholder"
-
-        android:title="Add" />
+        android:title="Add"
+        />
 
     <item
         android:id="@+id/searchPost"

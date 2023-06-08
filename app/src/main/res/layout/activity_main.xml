@@ -11,7 +11,7 @@
         tools:context=".MainActivity">
 
 
-        <ImageView
+    <ImageView
             android:id="@+id/landingPage"
             android:layout_width="404dp"
             android:layout_height="376dp"
@@ -64,7 +64,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_large"
         android:fontFamily="@font/lato"
         android:text="@string/registerButton"
