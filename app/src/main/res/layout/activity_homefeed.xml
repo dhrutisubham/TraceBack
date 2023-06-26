@@ -6,66 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_large_nocorner"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:buttonGravity="center_vertical"
-        app:contentInsetStart="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleMargin="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            tools:layout_editor_absoluteY="6dp">
-
-            <ImageView
-                android:id="@+id/logofeed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/darklogo_small_mid" />
-
-            <ImageView
-                android:id="@+id/pfpfeed"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:maxWidth="44dp"
-                android:maxHeight="44dp"
-                android:minWidth="36dp"
-                android:minHeight="36dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/pfpholder" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
+        android:id="@+id/feedrel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:clickable="true"
             app:backgroundTint="@android:color/transparent"
             app:borderWidth="0dp"
@@ -95,12 +51,13 @@
             app:defaultNavHost="true"
 
             app:navGraph="@navigation/mobile_navigation3" />
-        <!--        app:layout_constraintBottom_toTopOf="@id/nav_view"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
-    </RelativeLayout>
 
+
+        <!--        app:layout_constraintBottom_toTopOf="@id/nav_view"-->
+        <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--        app:layout_constraintRight_toRightOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_large_solid_nocorner"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:gravity="center_vertical"
         android:minHeight="116dp"
         android:padding="40dp"

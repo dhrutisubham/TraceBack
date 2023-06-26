@@ -6,6 +6,7 @@
     <color name="themebluehint">#8893DEFF</color>
     <color name="themewhite">#F7F7F7</color>
     <color name="themebggrey">#606470</color>
+    <color name="themebggreyfocus">#80606470</color>
 
     <color name="themedark">#323643</color>
 

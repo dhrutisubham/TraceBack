@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,6 +28,7 @@ public class homefeed extends AppCompatActivity implements View.OnClickListener 
     private ActivityHomefeedBinding binding;
     Toolbar tb;
     FloatingActionButton addp;
+
 //    Button button;
 
 
@@ -36,7 +39,6 @@ public class homefeed extends AppCompatActivity implements View.OnClickListener 
 
         setContentView(binding.getRoot());
 
-//        setContentView(R.layout.activity_homefeed);
 
         tb=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(tb);
@@ -68,6 +70,8 @@ public class homefeed extends AppCompatActivity implements View.OnClickListener 
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
+
+
 
     private void showPictureOptionsPopup() {
         Dialog dialog = new Dialog(this);

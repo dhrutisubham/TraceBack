@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".homefeed"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:theme="@style/Theme.TraceBack"
             />
 
         <meta-data
