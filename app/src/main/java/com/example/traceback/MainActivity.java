@@ -1,8 +1,5 @@
 package com.example.traceback;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,9 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button login, register;
+
+    FirebaseAuth mAuth;
 
 
     @Override
@@ -25,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         register=(Button)findViewById(R.id.landingRegister);
         register.setOnClickListener(this);
+
+        mAuth=FirebaseAuth.getInstance();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -53,6 +60,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         builder.setNegativeButton("No", null);
         builder.show();
+    }
+
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user= mAuth.getCurrentUser();
+        if(user!= null){
+            startActivity(new Intent(this, homefeed.class));
+        }
+
     }
 
 }

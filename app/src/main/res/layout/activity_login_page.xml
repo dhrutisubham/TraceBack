@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginpw" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPW" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -89,25 +89,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginBanner" />
 
-    <EditText
-        android:id="@+id/loginpw"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/textfield"
-        android:ems="10"
-        android:fontFamily="@font/lato"
-        android:hint="Password"
-        android:includeFontPadding="true"
-        android:inputType="text"
-        android:padding="16dp"
-        android:password="true"
-        android:textColor="@color/themeblue"
-        android:textColorHint="@color/themebluehint"
-        android:textSize="20sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/forgotPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail">
+
+        <EditText
+            android:id="@+id/loginpw"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textfield"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="Password"
+            android:includeFontPadding="true"
+            android:inputType="text"
+            android:padding="16dp"
+            android:password="true"
+            android:textColor="@color/themeblue"
+            android:textColorHint="@color/themebluehint"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:fontFamily="@font/lato"
+            android:text="Forgot Password?"
+            android:textColor="@color/themeblue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/loginpw" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/loginText"

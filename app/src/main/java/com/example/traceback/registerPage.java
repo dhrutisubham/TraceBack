@@ -1,12 +1,14 @@
 package com.example.traceback;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -128,16 +130,16 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        pb.setVisibility(View.VISIBLE);
+
         if (v.getId() == R.id.regisLogin) {
             finish();
             startActivity(new Intent(this, loginPage.class));
         } else if (v.getId() == R.id.regisButton) {
+//            pb.setVisibility(View.VISIBLE);
             if (validInputs()) {
                 userRegister();
 
-                startActivity(new Intent(this, register2.class));
-                Toast.makeText(this, "Verification Link sent to WebMail", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(this, register2.class));
             } else pb.setVisibility(View.GONE);
 
         }
@@ -192,6 +194,8 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
 
     }
     private void userRegister() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(regButton.getWindowToken(), 0);
         String wbmail=webmail.getText().toString().trim();
         String pswrd=pw.getText().toString().trim();
         auth.createUserWithEmailAndPassword(wbmail, pswrd)
@@ -202,10 +206,10 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
                         if(task.isSuccessful()) {
                             user=FirebaseAuth.getInstance().getCurrentUser();
                             user.sendEmailVerification();
+                            Toast.makeText(registerPage.this, "Verification Link sent to WebMail", Toast.LENGTH_SHORT).show();
                             finish();
 //                            return true;
-
-//                            startActivity(new Intent(registerPage.this, register2.class));
+                            startActivity(new Intent(registerPage.this, register2.class));
                         }
                         else {
 

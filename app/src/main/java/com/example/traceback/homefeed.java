@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,9 +21,13 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.traceback.databinding.ActivityHomefeedBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class homefeed extends AppCompatActivity implements View.OnClickListener {
 
+    FirebaseAuth mAuth;
+    FirebaseUser user;
     private ActivityHomefeedBinding binding;
     Toolbar tb;
     FloatingActionButton addp;
@@ -37,8 +40,16 @@ public class homefeed extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         binding = ActivityHomefeedBinding.inflate(getLayoutInflater());
 
+        mAuth=FirebaseAuth.getInstance();
+        user=mAuth.getCurrentUser();
         setContentView(binding.getRoot());
 
+        if(user!=null) {
+            String name = user.getEmail().toString().trim();
+            Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+        } else{
+            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show();
+        }
 
         tb=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(tb);
